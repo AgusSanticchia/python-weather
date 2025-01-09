@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {{ title }} Weather </title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>{{ title }} Weather</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1>{{ title }} Weather</h1>
-    <p>{{ status }} and {{ temp }} &deg</p>
-    <p>Feels like {{ feels_like }} &deg</p>
+    <div class="container_weather">
+        <h1 class="weathertitle">{{ title }} Weather</h1>
+        <p class="statusTemp">{{ status }} and {{ temp }} &deg;</p>
+        <p class="feelsLike">Feels like {{ feels_like }} &deg;</p>
 
-    <form action="/weather">
-        <input type="text" name="city" placeholder="Enter city name" id="city"/>
-        <button type="submit">Submit</button>
-    </form>
+        <form action="/weather">
+            <input type="text" name="city" placeholder="Enter city name" id="city"/>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
 </body>
 </html>
